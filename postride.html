@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Post Ride Details</title>
+<script type="text/javascript">
+function getconfirm() {
+    var retVal = confirm("Confirm Your Ride Share ?");
+    if(retVal==true){
+    	alert("Your ride is successfully Posted !");
+    }
+ }	
+</script>
+</head>
+<body style="background-color:lightblue; font-size:20px">
+<p style="text-align:center"><b><i> Please Enter Your basic details of ride</i></b></p>
+<div class="container">
+<form action="post_ride" method="get">
+Enter Your Landmark <input type="text" name="loc" required>
+<br>
+<br>
+Expected Time to  Leave <input type="time"name="timetoleave"required>
+<br>	
+<br>
+Type of Vehicle
+<select type="text" name="typeofvehicle">
+<option value="Two wheeler" >Two wheeler</option>
+<option value="Four Wheeler">Four wheeler</option>
+</select>
+<br>
+<br>
+No. of Seats Available
+<input type="number" name="noofseats" required>
+<br>
+<br>
+<label>Select Route</label><br>
+<input type="checkbox" name="route" value="Tonk Road">Tonk Road
+<input type="checkbox" name="route" value="Sanganer">Sanganer
+<input type="checkbox" name="route" value="JLN">JLN
+<br>
+
+<div class="btn btn-primary">
+<button type="submit" Onclick="getconfirm()"style="color:white;border:2px solid black; background-color:black;margin-left:200px;margin-top:20px">Post</button></div>
+</form>
+</div>
+</html>

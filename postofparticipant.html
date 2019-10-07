@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>Post detail of participant</title>
+<script type="text/javascript">
+function getconfirm() {
+    var retVal = confirm("Confirm Your Request For Ride ?");
+    if(retVal==true){
+    	alert("Your Request is Successfully Posted !");
+    }
+ }	
+</script>
+</head>
+<body style="background-color:lightblue; font-size:20px">
+<p style="text-align:center"><b><i> Please Enter Your Detail of ride</i></b></p>
+<div class="container">
+<form action="post_as_participant" method="get">
+
+Enter your Pickup Location <input type="text" name="loc_p"required>
+<br>
+<br>
+Enter your Area <input type="text" name="area_p" required>
+<br>
+<br>
+Expected time to Pickup<input type="time"name="timetoleave_p"required>
+<br>
+<br>
+No. of Seats Required
+<input type="number" name="noofseats_p" required>
+<br>
+<br>
+
+<div class="btn btn-primary">
+<button type="submit" Onclick="getconfirm()" style="color:white;border:2px solid black; background-color:black;margin-left:200px;margin-top:20px">Post Pickup Request</button></div>
+</form>
+</div>
+</body>
+</html>
